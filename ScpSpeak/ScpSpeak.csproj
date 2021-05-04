@@ -33,10 +33,10 @@
     </PropertyGroup>
     <ItemGroup>
         <Reference Include="0Harmony, Version=2.0.3.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\..\..\Desktop\Files\EXILED\0Harmony.dll</HintPath>
+          <HintPath>lib\0Harmony.dll</HintPath>
         </Reference>
         <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\..\..\Desktop\Files\EXILED\Assembly-CSharp.dll</HintPath>
+          <HintPath>lib\Assembly-CSharp.dll</HintPath>
         </Reference>
         <Reference Include="Exiled.API, Version=2.10.0.0, Culture=neutral, PublicKeyToken=null">
           <HintPath>lib\Exiled.API.dll</HintPath>
