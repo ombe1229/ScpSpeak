@@ -8,10 +8,10 @@ namespace ScpSpeak.Patches
     [HarmonyPatch(typeof(DissonanceUserSetup), nameof(DissonanceUserSetup.CallCmdAltIsActive))]
     public class ScpSpeak
     {
-        public static void Prefix(DissonanceUserSetup __instance, bool value)
+        public static void Prefix(DissonanceUserSetup instance, bool value)
         {
-            CharacterClassManager ccm = __instance.gameObject.GetComponent<CharacterClassManager>();
-            if (IsScp(ccm.CurClass)) __instance.MimicAs939 = value;
+            CharacterClassManager ccm = instance.gameObject.GetComponent<CharacterClassManager>();
+            if (IsScp(ccm.CurClass)) instance.MimicAs939 = value;
         }
 
         private static bool IsScp(RoleType role)
