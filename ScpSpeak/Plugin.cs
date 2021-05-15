@@ -2,16 +2,23 @@
 using HarmonyLib;
 using Features = Exiled.API.Features;
 using Log = Exiled.API.Features.Log;
+using Exiled.API.Enums;
 
 namespace ScpSpeak
 {
     public class ScpSpeak : Features.Plugin<Configs>
     {
         public Harmony Harmony { get; private set;  }
-
+        
+        public override string Name { get; } = "ScpSpeak";
+        public override string Prefix { get; } = "ScpSpeak";
+        public override string Author { get; } = "ombe1229";
+        public override PluginPriority Priority { get; } = PluginPriority.Default;
+        
         public override void OnEnabled()
         {
             if (!Config.IsEnabled) return;
+            base.OnEnabled();
             Log.Info("Plugin is enabled.");
             try
             {
@@ -26,6 +33,7 @@ namespace ScpSpeak
 
         public override void OnDisabled()
         {
+            base.OnDisabled();
             Harmony.UnpatchAll();
         }
     }
